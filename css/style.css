@@ -1,0 +1,246 @@
+@font-face {
+  font-family: kamikaze;
+  src: url('/font/Kamikaze3DGradient.ttf') format('truetype');
+}
+.kamikaze{
+  font-family: kamikaze;
+}
+/* Set brightness before the button is clicked */
+.dimmed-image {
+    filter: brightness(50%);
+    transition: filter 0.3s ease;
+}
+
+/* Restore brightness when the button is clicked */
+.active-image {
+    filter: brightness(100%);
+}
+
+/* Animation to hide the button */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+/* Fade effect for annotation */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Keyframes for the fade-up effect */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+/* Fade-up animation */
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 10s forwards; /* Animation duration of 10s */
+}
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Semi-transparent background */
+  z-index: 9999; /* Ensure it is on top of other elements */
+}
+/* From Uiverse.io by ClawHack1 */ 
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+  
+.loader:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+}
+  
+.loader-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+  
+.loader-block {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 2px;
+    background-color: #fff;
+    box-shadow: 0 0 20px #fff;
+    animation: loader_562 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+  
+.loader-block:nth-child(1) {
+    animation-delay: 0.1s;
+}
+  
+.loader-block:nth-child(2) {
+    animation-delay: 0.2s;
+}
+  
+.loader-block:nth-child(3) {
+    animation-delay: 0.3s;
+}
+  
+.loader-block:nth-child(4) {
+    animation-delay: 0.4s;
+}
+  
+.loader-block:nth-child(5) {
+    animation-delay: 0.5s;
+}
+  
+.loader-block:nth-child(6) {
+    animation-delay: 0.6s;
+}
+  
+.loader-block:nth-child(7) {
+    animation-delay: 0.7s;
+}
+  
+.loader-block:nth-child(8) {
+    animation-delay: 0.8s;
+}
+  
+@keyframes loader_562 {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+  
+    20% {
+      transform: scale(1, 2.5);
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.7);
+    }
+  
+    40% {
+      transform: scale(1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+  
+@keyframes move {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(130px)
+  }
+}
+
+.animate-cloud {
+  animation: move 4s linear infinite; /* Change duration if needed */
+  opacity: 0.8;
+}
+
+.cloud1 {
+  animation-duration: 3s; /* Duration for the first cloud */
+}
+
+.cloud2 {
+  animation-duration: 4s; /* Duration for the second cloud */
+}
+
+/* sakura */
+.sakura {
+  position: absolute;
+  top: -10%;
+  width: 30px; /* Adjust size */
+  height: 30px; /* Adjust size */
+  background-image: url('/img/cherry\ blossom\ buds.png'); /* Replace with the image path */
+  background-size: cover;
+  opacity: 0.6;
+  animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+      transform: translateX(0) translateY(0);
+  }
+  100% {
+      transform: translateX(60px) translateY(100vh);
+  }
+}
+
+/* Variations for sakura flowers */
+.sakura:nth-child(1) {
+  left: 10%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.sakura:nth-child(2) {
+  left: 30%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.sakura:nth-child(3) {
+  left: 50%;
+  animation-duration: 6s;
+  animation-delay: 2s;
+}
+
+.sakura:nth-child(4) {
+  left: 70%;
+  animation-duration: 5s;
+  animation-delay: 3s;
+}
+
+.sakura:nth-child(5) {
+  left: 85%;
+  animation-duration: 4s;
+  animation-delay: 4s;
+}
+
+.sakura:nth-child(6) {
+  left: 30%;
+  animation-duration: 5.5s;
+  animation-delay: 0.5s;
+}
+
+.sakura:nth-child(7) {
+  left: 15%;
+  animation-duration: 4.5s;
+  animation-delay: 1.5s;
+}
+
+.sakura:nth-child(8) {
+  left: 30%;
+  animation-duration: 5s;
+  animation-delay: 2.5s;
+}
+
+.sakura:nth-child(9) {
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 3.5s;
+}
+
+.sakura:nth-child(10) {
+  left: 25%;
+  animation-duration: 4s;
+  animation-delay: 4.5s;
+}
